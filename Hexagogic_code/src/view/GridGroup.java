@@ -6,6 +6,7 @@ import modele.*;
 import sample.Controller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 
 /**
@@ -123,10 +124,12 @@ public class GridGroup extends Group {
      */
     public void createCircuit(Position [] parBeginTilePos, Boolean [] parBeginVal, Position parEndTilePos, Boolean parEndVal) {
         ArrayList<StaticCell> beginCells = new ArrayList<StaticCell>();
+        ArrayList<Position> beginPos = new ArrayList<Position>();
         for (int i=0 ; i<parBeginTilePos.length ; i++) {
             beginCells.add(new StaticCell(parBeginVal[i]) );
             Tile beginTile = this.getTile(parBeginTilePos[i]);
             forbidden.add(beginTile.getPosition());
+            beginPos.add(beginTile.getPosition());
             beginTile.setLogicalCell(beginCells.get(i));
             beginTile.setFill(Color.GREY);
         }
@@ -137,7 +140,7 @@ public class GridGroup extends Group {
         endTile.setLogicalCell(endCell);
         endTile.setFill(Color.GREY);
 
-        logicalCircuit = new LogicalCircuit(beginCells, endCell);
+        logicalCircuit = new LogicalCircuit(beginCells, beginPos, endCell, parEndTilePos);
     }
 
     /**
@@ -193,7 +196,8 @@ public class GridGroup extends Group {
      * Return Tile's Position that can't be changed. Begin and end Tile
      */
     public ArrayList<Position> getForbiddenPos() {
-        return forbidden;
+        //return forbidden;
+        return logicalCircuit.getStaticPosition();
     }
 
     /**

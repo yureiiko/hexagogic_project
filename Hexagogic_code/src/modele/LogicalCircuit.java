@@ -9,8 +9,10 @@ import java.util.ArrayList;
 public class LogicalCircuit {
 
     private ArrayList<StaticCell> beginCells = new ArrayList<StaticCell>();
+    private ArrayList<Position> beginPosition = new ArrayList<Position>();
 
     private StaticCell endCell;
+    private Position endPosition;
 
     /**
      * Constructor LogicalCircuit
@@ -18,10 +20,25 @@ public class LogicalCircuit {
      * @param parEndVar StaticCell
      */
     public LogicalCircuit(ArrayList<StaticCell> parBeginCells , StaticCell parEndVar) {
-        for (int i=0 ; i<parBeginCells.size() ; i++) {
+        /*for (int i=0 ; i<parBeginCells.size() ; i++) {
             beginCells.add(parBeginCells.get(i));
-        }
+        }*/
+        beginCells = parBeginCells;
         endCell = parEndVar;
+    }
+
+    /**
+     * Constructor LogicalCircuit
+     * @param parBeginCells ArrayList<StaticCell>
+     * @param parBeginPosition ArrayList<Position>
+     * @param parEndVar StaticCell
+     * @param parEndPostion Position
+     */
+    public LogicalCircuit(ArrayList<StaticCell> parBeginCells, ArrayList<Position> parBeginPosition, StaticCell parEndVar, Position parEndPostion) {
+        beginCells = parBeginCells;
+        beginPosition = parBeginPosition;
+        endCell = parEndVar;
+        endPosition = parEndPostion;
     }
 
     /**
@@ -50,6 +67,17 @@ public class LogicalCircuit {
      */
     public LogicalCell getEndCell() {
         return endCell;
+    }
+
+    /**
+     * Method getStaticPosition
+     * @return ArrayList<Position>
+     * Return an ArrayList with Position occupied by begin and en cells
+     */
+    public ArrayList<Position> getStaticPosition() {
+        ArrayList<Position> out = new ArrayList<Position>(beginPosition);
+        out.add(endPosition);
+        return out;
     }
 
     /**

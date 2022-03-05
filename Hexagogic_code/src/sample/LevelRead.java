@@ -14,7 +14,7 @@ public class LevelRead {
 
     private ReadWrite writeRead = new ReadWrite();
     private File file = new File("file_level.ser");
-    private ArrayList <LogicalCircuit> listLevel = new ArrayList();
+    private ArrayList <LogicalCircuit> listLevel = new ArrayList<LogicalCircuit>();
 
     /**
      * Constructor LevelRead
