@@ -10,7 +10,7 @@ import java.io.ObjectOutputStream;
 /**
  * ReadWrite class able user the reading and writing of files
  *
- * @author Professor, translate by Bonifacio TimothÃ©
+ * @author Professor, translate by Bonifacio Timothe
  */
 
 public class ReadWrite {
