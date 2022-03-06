@@ -9,7 +9,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
 import sample.Controller;
-import view.ButtonMenu;
 
 import java.io.IOException;
 
@@ -19,7 +18,7 @@ import java.io.IOException;
  */
 public class MenuPane extends Parent{
 	Controller controller;
-	ButtonMenu resume = new ButtonMenu("RESUME");
+	ButtonMenu play = new ButtonMenu("PLAY");
 	ButtonMenu restart = new ButtonMenu("RESTART");
 	ButtonMenu selectLevel = new ButtonMenu("SELECT LEVEL");
 	ButtonMenu tutorial = new ButtonMenu("TUTORIAL");
@@ -53,15 +52,16 @@ public class MenuPane extends Parent{
 		
 		VBox menu = new VBox();
 
-		ButtonMenu [] boutons = {resume, restart, selectLevel, tutorial, nextLevel, mainMenu, exit};
+		ButtonMenu [] boutons = {play, restart, selectLevel, tutorial, nextLevel, mainMenu, exit};
 
-		resume.setOnMouseClicked(event -> {
+		play.setOnMouseClicked(event -> {
 			FadeTransition ft = new FadeTransition(Duration.seconds(1), this);
 			ft.setFromValue(1);
 			ft.setToValue(0);
 			ft.setOnFinished(evt -> this.setVisible(false));
 			ft.play();
-			controller.setGameStage();
+			//controller.setGameStage();
+			controller.setSelectionStage();
 		});
 
 		tutorial.setOnMouseClicked(event -> {

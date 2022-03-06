@@ -23,4 +23,7 @@ public final class Constants {
             Color.RED
     };
 
+    public static int high = 900;
+    public static int with = 800;
+
 }

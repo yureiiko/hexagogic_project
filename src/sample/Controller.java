@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 
@@ -8,6 +9,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.*;
 
+import modele.Constants;
 import modele.LogicalCell;
 import modele.Position;
 import modele.StaticCell;
@@ -65,10 +67,21 @@ public class Controller extends Application {
         mainStage.setTitle("Hexagogic");
 
         MenuPane menuPane = new MenuPane(this);
-        MenuScene menuScene = new MenuScene(this, menuPane, 900, 800);
+        MenuScene menuScene = new MenuScene(this, menuPane, Constants.high, Constants.with);
 
         mainStage.setScene(menuScene);
         mainStage.show();
+    }
+
+    /**
+     * Method setSelectionStage
+     * Display a panel to select the level
+     */
+    public void setSelectionStage() {
+        SelectionPane selectionPane = new SelectionPane(this, 3);
+        Scene selectionScene = new Scene(selectionPane, Constants.high, Constants.with);
+
+        mainStage.setScene(selectionScene);
     }
 
     /**

@@ -41,7 +41,9 @@ public class CreateLevel {
         Position endPos = new Position(2,4);
         /******/
 
-        //levelRead.addLevel();
+        LogicalCircuit logicalCircuit = new LogicalCircuit(beginCells, beginPos, endCell, endPos);
+
+        //levelRead.addLevel(logicalCircuit);
     }
 
 }
