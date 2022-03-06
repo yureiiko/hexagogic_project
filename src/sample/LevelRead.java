@@ -4,7 +4,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import modele.Constants;
 import modele.LogicalCircuit;
+import modele.StaticCell;
 
 /**
  * @author BONIFACIO TimothÃ©
@@ -21,6 +23,15 @@ public class LevelRead {
      */
     public LevelRead(){
         this.createFile();
+    }
+
+    /**
+     * Method size
+     * @return int
+     * Return the size of the list of level
+     */
+    public int size() {
+        return listLevel.size();
     }
 
     /**
@@ -41,7 +52,7 @@ public class LevelRead {
      */
     public LogicalCircuit getLevel(int numLevel) {
         if (numLevel >= listLevel.size()) {
-            return null;
+            return Constants.saveCircuit();
         }else {
             return listLevel.get(numLevel-1);
         }

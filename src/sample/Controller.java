@@ -9,10 +9,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.stage.*;
 
-import modele.Constants;
-import modele.LogicalCell;
-import modele.Position;
-import modele.StaticCell;
+import modele.*;
 import view.Tile;
 import view.*;
 
@@ -31,6 +28,7 @@ public class Controller extends Application {
 
     /***************/
     private LevelRead allLevel = new LevelRead();
+    private int chozenLevel;
     /***************/
 
     private Popup popup = new Popup();
@@ -78,10 +76,28 @@ public class Controller extends Application {
      * Display a panel to select the level
      */
     public void setSelectionStage() {
-        SelectionPane selectionPane = new SelectionPane(this, 3);
+        SelectionPane selectionPane = new SelectionPane(this, allLevel.size());
         Scene selectionScene = new Scene(selectionPane, Constants.high, Constants.with);
 
         mainStage.setScene(selectionScene);
+    }
+
+    /**
+     * Method setChozenLevel
+     * @param parId int
+     * Set the number of the level chozen by the player
+     */
+    public void setChozenLevel(int parId) {
+        chozenLevel = parId;
+    }
+
+    /**
+     * Method getChozenLevel
+     * @return LogicalCircuit
+     * Return the circuit with the number chozen by the player
+     */
+    public LogicalCircuit getChozenLevel() {
+        return allLevel.getLevel(chozenLevel);
     }
 
     /**

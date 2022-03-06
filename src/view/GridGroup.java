@@ -51,9 +51,12 @@ public class GridGroup extends Group {
                 this.getChildren().add(tile);
             }
         }
-        Position [] pos = {new Position(0,4), new Position(0,5)};
-        Boolean [] val = {false, true};
-        createCircuit(pos, val, new Position(2,4), true);
+
+        logicalCircuit = controller.getChozenLevel();
+        this.createCircuit(logicalCircuit.getBeginCells(),
+                logicalCircuit.getBeginPosition(),
+                (StaticCell) logicalCircuit.getEndCell(),
+                logicalCircuit.getEndPosition());
     }
 
     /**
@@ -116,31 +119,21 @@ public class GridGroup extends Group {
 
     /**
      * Method createCircuit
-     * @param parBeginTilePos Position []
-     * @param parBeginVal Boolean []
-     * @param parEndTilePos Position
-     * @param parEndVal Boolean
-     * Create the LogicalCircuit with all begin and end variables
+     * @param parBeginCell ArrayList<StaticCell>
+     * @param parBeginPos ArrayList<Position>
+     * @param parEndCell StaticCell
+     * @param parEndPos Position
      */
-    public void createCircuit(Position [] parBeginTilePos, Boolean [] parBeginVal, Position parEndTilePos, Boolean parEndVal) {
-        ArrayList<StaticCell> beginCells = new ArrayList<StaticCell>();
-        ArrayList<Position> beginPos = new ArrayList<Position>();
-        for (int i=0 ; i<parBeginTilePos.length ; i++) {
-            beginCells.add(new StaticCell(parBeginVal[i]) );
-            Tile beginTile = this.getTile(parBeginTilePos[i]);
-            forbidden.add(beginTile.getPosition());
-            beginPos.add(beginTile.getPosition());
-            beginTile.setLogicalCell(beginCells.get(i));
+    public void createCircuit(ArrayList<StaticCell> parBeginCell, ArrayList<Position> parBeginPos, StaticCell parEndCell, Position parEndPos) {
+        for (int i=0 ; i<parBeginCell.size() ; i++) {
+            Tile beginTile = this.getTile(parBeginPos.get(i));
+            beginTile.setLogicalCell(parBeginCell.get(i));
             beginTile.setFill(Color.GREY);
         }
 
-        StaticCell endCell = new StaticCell(parEndVal);
-        Tile endTile = this.getTile(parEndTilePos);
-        forbidden.add(endTile.getPosition());
-        endTile.setLogicalCell(endCell);
+        Tile endTile = this.getTile(parEndPos);
+        endTile.setLogicalCell(parEndCell);
         endTile.setFill(Color.GREY);
-
-        logicalCircuit = new LogicalCircuit(beginCells, beginPos, endCell, parEndTilePos);
     }
 
     /**

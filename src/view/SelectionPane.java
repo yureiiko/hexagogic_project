@@ -1,6 +1,8 @@
 package view;
 
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import modele.Constants;
 import sample.Controller;
@@ -29,7 +31,12 @@ public class SelectionPane extends GridPane {
 
         for (int i=0 ; i<=parNbButton ; i++) {
             Button newButton = new Button(String.valueOf(i));
+            newButton.setId(String.valueOf(i));
             newButton.setPrefWidth(this.getWidth()/8);
+            newButton.setOnMouseClicked( event -> {
+                controller.setChozenLevel(new Integer(newButton.getId()));
+                controller.setGameStage();
+            });
             listButton.add(newButton);
             int l = i/8;
             this.add(newButton, i, l);

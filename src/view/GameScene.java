@@ -13,7 +13,7 @@ import sample.Controller;
 public class GameScene extends Scene {
     private Controller controller;
     private BorderPane gamePane;
-    private GridGroup gridGroup = new GridGroup(controller);
+    private GridGroup gridGroup/* = new GridGroup(controller)*/;
 
     /**
      * Constructor GameScene
@@ -30,8 +30,8 @@ public class GameScene extends Scene {
         gamePane.setStyle("-fx-background-color: black;");
 
         Pane gridPane = new Pane();
-        GridGroup grid = new GridGroup(controller);
-        gridPane.getChildren().add(grid);
+        gridGroup = new GridGroup(controller);
+        gridPane.getChildren().add(gridGroup);
         gamePane.setCenter(gridPane);
 
         String [] opeList = {"AND", "OR"} ;

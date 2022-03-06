@@ -56,8 +56,17 @@ public class LogicalCircuit {
      * @return LogicalCell
      * Return the begin cell with the given index
      */
-    public LogicalCell getBeginCell(int parInd) {
+    public StaticCell getBeginCell(int parInd) {
         return beginCells.get(parInd);
+    }
+
+    /**
+     * Method getBeginPostion
+     * @return ArrayList<Position>
+     * Return the position of all begin cells
+     */
+    public ArrayList<Position> getBeginPosition() {
+        return beginPosition;
     }
 
     /**
@@ -65,8 +74,17 @@ public class LogicalCircuit {
      * @return LogicaCell
      * Return the last LogicallCell
      */
-    public LogicalCell getEndCell() {
+    public StaticCell getEndCell() {
         return endCell;
+    }
+
+    /**
+     * Method getEndPostion
+     * @return Position
+     * Return the position of the end cell
+     */
+    public Position getEndPosition() {
+        return endPosition;
     }
 
     /**
