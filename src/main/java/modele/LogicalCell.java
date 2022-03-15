@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class LogicalCell {
     private LogicalOperation operation;
-    private Boolean input1;
+    private Boolean input1 = null;
     private Boolean input2 = null;
     private LogicalCell nextCell1 = null;
     private LogicalCell nextCell2 = null;
@@ -63,12 +63,12 @@ public class LogicalCell {
     /**
      * Method setnextCell1
      * @param parCell LogicalCell
-     * Change the first next LogicalCell
+     * Change the first next LogicalCell and set the first input of the next LogicalCell (at null if miss an input in the current LogicalCell)
      */
     public void setNextCell1(LogicalCell parCell) {
         nextCell1 = parCell;
         if (!(this.isSetInput1() && this.isSetInput2())) {
-            nextCell1.setInput2(input1);
+            nextCell1.setInput2(null);
         }
         if (expectedVal != null) {
             nextCell1.setInput2(operation.execute(input1, input2));
@@ -78,12 +78,12 @@ public class LogicalCell {
     /**
      * Method setNextell2
      * @param parCell LogicalCell
-     * Change the second next LogicalCell
+     * Change the second next LogicalCell and set the second input of the next LogicalCell (at null if miss an input in the current LogicalCell)
      */
     public void setNextCell2(LogicalCell parCell) {
         nextCell2 = parCell;
         if (!(this.isSetInput1() && this.isSetInput2())) {
-            nextCell2.setInput2(input1);
+            nextCell2.setInput2(null);
         }
         if (expectedVal != null) {
             nextCell2.setInput2(operation.execute(input1, input2));

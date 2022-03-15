@@ -14,6 +14,8 @@ public class LogicalCircuit {
     private StaticCell endCell;
     private Position endPosition;
 
+    private String explications = null;
+
     /**
      * Constructor LogicalCircuit
      * @param parBeginCells [] StaticCell
@@ -108,5 +110,14 @@ public class LogicalCircuit {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Method setExplications
+     * @param parString
+     * Change explications for the level's direction
+     */
+    public void setExplications(String parString) {
+        this.explications = parString;
     }
 }
