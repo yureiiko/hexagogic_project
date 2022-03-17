@@ -3,6 +3,7 @@ package view;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
@@ -15,7 +16,7 @@ import sample.Controller;
 public class OptionPane extends BorderPane {
     private Controller controller;
     private Button breakButton = new Button("Break");
-    //private TextField valueDisplay = new TextField();
+    private TextField valueDisplay = new TextField();
 
     /**
      * Constructor MenuPane
@@ -27,12 +28,17 @@ public class OptionPane extends BorderPane {
             controller.setMenuStage();
         });
         this.setRight(breakButton);
-        //valueDisplay.setEditable(false);
-        //this.setLeft(valueDisplay);
+        valueDisplay.setEditable(false);
+        this.setLeft(valueDisplay);
     }
 
-    /*public void displayValue(String parString) {
+    /**
+     * Method displayValue
+     * @param parString String
+     * Change text in the TextArea
+     */
+    public void displayValue(String parString) {
         valueDisplay.setText(parString);
-    }*/
+    }
 
 }

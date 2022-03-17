@@ -187,6 +187,7 @@ public class Controller extends Application {
      */
     public void showPopup(Label parLabel, double x, double y) {
         parLabel.setStyle("-fx-background-color: grey;");
+        popup = new Popup();
         popup.getContent().add(parLabel);
         popup.show(mainStage, x, y);
     }
@@ -197,6 +198,15 @@ public class Controller extends Application {
      */
     public void hidePopup() {
         popup.hide();
+    }
+
+    /**
+     * Method display
+     * @param parString String
+     * Display text in the TextField of the OptionPane in the GameScene
+     */
+    public void display(String parString) {
+        gameScene.getOptionPane().displayValue(parString);
     }
 
     /**

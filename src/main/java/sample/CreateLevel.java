@@ -41,7 +41,12 @@ public class CreateLevel {
         Position endPos = new Position(2,4);
         /******/
 
+        /***Direction for the level***/
+        String dir = "Use only two first operation tile";
+        /******/
+
         LogicalCircuit logicalCircuit = new LogicalCircuit(beginCells, beginPos, endCell, endPos);
+        logicalCircuit.setExplications(dir);
 
         //levelRead.addLevel(logicalCircuit);
     }

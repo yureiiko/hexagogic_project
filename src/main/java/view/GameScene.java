@@ -14,6 +14,7 @@ public class GameScene extends Scene {
     private Controller controller;
     private BorderPane gamePane;
     private GridGroup gridGroup/* = new GridGroup(controller)*/;
+    private OptionPane optionPane;
 
     /**
      * Constructor GameScene
@@ -29,6 +30,9 @@ public class GameScene extends Scene {
         gamePane = parGamePane;
         gamePane.setStyle("-fx-background-color: black;");
 
+        optionPane = new OptionPane(controller);
+        gamePane.setBottom(optionPane);
+
         Pane gridPane = new Pane();
         gridGroup = new GridGroup(controller);
         gridPane.getChildren().add(gridGroup);
@@ -37,8 +41,6 @@ public class GameScene extends Scene {
         String [] opeList = {"AND", "OR"} ;
         TileOperationPane tileOpe = new TileOperationPane(opeList, controller);
         gamePane.setRight(tileOpe);
-        OptionPane optionPane = new OptionPane(controller);
-        gamePane.setBottom(optionPane);
     }
 
     /**
@@ -66,6 +68,15 @@ public class GameScene extends Scene {
      */
     public TileOperationPane getTileOperationPane() {
         return (TileOperationPane) gamePane.getRight();
+    }
+
+    /**
+     * Method getOptionPane
+     * @return OptionPane
+     * Return the OptionPane at the bottom of the gamePane
+     */
+    public OptionPane getOptionPane() {
+        return optionPane;
     }
 
 }

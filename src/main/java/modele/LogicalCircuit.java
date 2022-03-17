@@ -120,4 +120,13 @@ public class LogicalCircuit {
     public void setExplications(String parString) {
         this.explications = parString;
     }
+
+    /**
+     * Method getExplications
+     * @return String
+     * Return direction for the level
+     */
+    public String getExplications() {
+        return this.explications;
+    }
 }

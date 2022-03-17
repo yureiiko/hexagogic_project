@@ -57,6 +57,8 @@ public class GridGroup extends Group {
                 logicalCircuit.getBeginPosition(),
                 (StaticCell) logicalCircuit.getEndCell(),
                 logicalCircuit.getEndPosition());
+
+        //controller.display(logicalCircuit.getExplications());
     }
 
     /**
