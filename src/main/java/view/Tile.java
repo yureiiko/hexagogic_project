@@ -90,6 +90,6 @@ public class Tile extends Polygon {
         if (logicalCell.getExpectedVal() != null) {
             return logicalCell.getExpectedVal().toString();
         }
-        return logicalCell.getInput1().toString();
+        return logicalCell.getOut().toString();
     }
 }

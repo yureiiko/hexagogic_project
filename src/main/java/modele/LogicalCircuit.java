@@ -18,28 +18,15 @@ public class LogicalCircuit {
 
     /**
      * Constructor LogicalCircuit
-     * @param parBeginCells [] StaticCell
-     * @param parEndVar StaticCell
-     */
-    public LogicalCircuit(ArrayList<StaticCell> parBeginCells , StaticCell parEndVar) {
-        /*for (int i=0 ; i<parBeginCells.size() ; i++) {
-            beginCells.add(parBeginCells.get(i));
-        }*/
-        beginCells = parBeginCells;
-        endCell = parEndVar;
-    }
-
-    /**
-     * Constructor LogicalCircuit
      * @param parBeginCells ArrayList<StaticCell>
      * @param parBeginPosition ArrayList<Position>
-     * @param parEndVar StaticCell
+     * @param parEndCell StaticCell
      * @param parEndPostion Position
      */
-    public LogicalCircuit(ArrayList<StaticCell> parBeginCells, ArrayList<Position> parBeginPosition, StaticCell parEndVar, Position parEndPostion) {
+    public LogicalCircuit(ArrayList<StaticCell> parBeginCells, ArrayList<Position> parBeginPosition, StaticCell parEndCell, Position parEndPostion) {
         beginCells = parBeginCells;
         beginPosition = parBeginPosition;
-        endCell = parEndVar;
+        endCell = parEndCell;
         endPosition = parEndPostion;
     }
 

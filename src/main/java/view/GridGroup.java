@@ -191,7 +191,6 @@ public class GridGroup extends Group {
      * Return Tile's Position that can't be changed. Begin and end Tile
      */
     public ArrayList<Position> getForbiddenPos() {
-        //return forbidden;
         return logicalCircuit.getStaticPosition();
     }
 

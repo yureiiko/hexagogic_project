@@ -26,10 +26,8 @@ public class Controller extends Application {
     private Stage mainStage = new Stage();
     private GameScene gameScene;
 
-    /***************/
     private LevelRead allLevel = new LevelRead();
     private int chozenLevel;
-    /***************/
 
     private Popup popup = new Popup();
 
@@ -198,15 +196,6 @@ public class Controller extends Application {
      */
     public void hidePopup() {
         popup.hide();
-    }
-
-    /**
-     * Method display
-     * @param parString String
-     * Display text in the TextField of the OptionPane in the GameScene
-     */
-    public void display(String parString) {
-        gameScene.getOptionPane().displayValue(parString);
     }
 
     /**
