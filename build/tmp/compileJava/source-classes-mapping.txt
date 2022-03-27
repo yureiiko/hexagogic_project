@@ -16,33 +16,33 @@ modele/StaticCell.java
  modele.StaticCell
 modele/Constants.java
  modele.Constants
+module-info.java
+ module-info
+modele/LogicalCircuit.java
+ modele.LogicalCircuit
+sample/CreateLevel.java
+ sample.CreateLevel
+sample/LevelRead.java
+ sample.LevelRead
+view/TileOperationPane.java
+ view.TileOperationPane
 view/TutoScene.java
  view.TutoScene
+sample/Controller.java
+ sample.Controller
 view/Tile.java
  view.Tile
+view/GridGroup.java
+ view.GridGroup
 view/OptionPane.java
  view.OptionPane
+view/MenuScene.java
+ view.MenuScene
 view/MenuPane.java
  view.MenuPane
 view/TutoPane.java
  view.TutoPane
-module-info.java
- module-info
 view/SelectionPane.java
  view.SelectionPane
-view/TileOperationPane.java
- view.TileOperationPane
-modele/LogicalCircuit.java
- modele.LogicalCircuit
-sample/Controller.java
- sample.Controller
-view/GridGroup.java
- view.GridGroup
-view/MenuScene.java
- view.MenuScene
-sample/CreateLevel.java
- sample.CreateLevel
 view/GameScene.java
  view.GameScene
-sample/LevelRead.java
- sample.LevelRead
