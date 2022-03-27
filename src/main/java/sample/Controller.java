@@ -110,7 +110,7 @@ public class Controller extends Application {
     /**
      * Method setNewTile
      * @param parTile Tile
-     * @param forbidden ArrayList <Position>
+     * @param forbidden ArrayList (Position)
      * Set a new Tile in the GridGroup
      */
     public void setNewTile(Tile parTile, ArrayList <Position> forbidden) {

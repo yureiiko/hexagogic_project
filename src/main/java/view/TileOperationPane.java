@@ -23,6 +23,7 @@ public class TileOperationPane extends TilePane {
     /**
      * Constructor TileOperationPane
      * @param listOpe String []
+     * @param parController Controller
      */
     public TileOperationPane(String [] listOpe, Controller parController) {
         super();

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"Hexagogic.code","l":"modele"},{"m":"Hexagogic.code","l":"sample"},{"m":"Hexagogic.code","l":"tmp"},{"m":"Hexagogic.code","l":"view"}]

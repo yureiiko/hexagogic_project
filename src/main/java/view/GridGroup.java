@@ -121,8 +121,8 @@ public class GridGroup extends Group {
 
     /**
      * Method createCircuit
-     * @param parBeginCell ArrayList<StaticCell>
-     * @param parBeginPos ArrayList<Position>
+     * @param parBeginCell ArrayList (StaticCell)
+     * @param parBeginPos ArrayList (Position)
      * @param parEndCell StaticCell
      * @param parEndPos Position
      */
@@ -158,7 +158,7 @@ public class GridGroup extends Group {
     /**
      * Method getBefore
      * @param parTile Tile
-     * @return ArrayList<Tile>
+     * @return ArrayList (Tile)
      * Return all Tile before the given Tile
      */
     public ArrayList<Tile> getBefore(Tile parTile) {
@@ -173,7 +173,7 @@ public class GridGroup extends Group {
     /**
      * Method getAfter
      * @param parTile Tile
-     * @return ArrayList<Tile>
+     * @return ArrayList (Tile)
      * Return all Tile after the given Tile
      */
     public ArrayList<Tile> getAfter(Tile parTile) {
@@ -187,7 +187,7 @@ public class GridGroup extends Group {
 
     /**
      * Method getForbiddenPos
-     * @return ArrayList <Position>
+     * @return ArrayList (Position)
      * Return Tile's Position that can't be changed. Begin and end Tile
      */
     public ArrayList<Position> getForbiddenPos() {

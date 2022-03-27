@@ -18,8 +18,8 @@ public class LogicalCircuit {
 
     /**
      * Constructor LogicalCircuit
-     * @param parBeginCells ArrayList<StaticCell>
-     * @param parBeginPosition ArrayList<Position>
+     * @param parBeginCells ArrayList (StaticCell)
+     * @param parBeginPosition ArrayList (Position)
      * @param parEndCell StaticCell
      * @param parEndPostion Position
      */
@@ -32,7 +32,7 @@ public class LogicalCircuit {
 
     /**
      * Method getBeginCells
-     * @return ArrayList<StaticCell>
+     * @return ArrayList (StaticCell)
      * Return an ArrayList with all logical cells at the beginning
      */
     public ArrayList<StaticCell> getBeginCells() {
@@ -51,7 +51,7 @@ public class LogicalCircuit {
 
     /**
      * Method getBeginPostion
-     * @return ArrayList<Position>
+     * @return ArrayList (Position)
      * Return the position of all begin cells
      */
     public ArrayList<Position> getBeginPosition() {
@@ -78,7 +78,7 @@ public class LogicalCircuit {
 
     /**
      * Method getStaticPosition
-     * @return ArrayList<Position>
+     * @return ArrayList (Position)
      * Return an ArrayList with Position occupied by begin and en cells
      */
     public ArrayList<Position> getStaticPosition() {

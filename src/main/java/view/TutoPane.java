@@ -28,7 +28,7 @@ public class TutoPane extends BorderPane {
     /**
      * Constructor TutoPane
      * @param parController Controller
-     * @throws IOException
+     * @throws IOException input output exception
      */
     public TutoPane(Controller parController) throws IOException {
         controller = parController;
