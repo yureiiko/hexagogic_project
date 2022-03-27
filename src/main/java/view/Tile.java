@@ -86,10 +86,10 @@ public class Tile extends Polygon {
      * Method getStringValue
      * @return String
      */
-    public String getStringValue() {
+    /*public String getStringValue() {
         if (logicalCell.getExpectedVal() != null) {
             return logicalCell.getExpectedVal().toString();
         }
         return logicalCell.getOut().toString();
-    }
+    }*/
 }
