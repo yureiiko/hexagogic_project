@@ -19,11 +19,11 @@ import java.io.IOException;
 public class MenuPane extends Parent{
 	Controller controller;
 	ButtonMenu play = new ButtonMenu("PLAY");
-	ButtonMenu restart = new ButtonMenu("RESTART");
-	ButtonMenu selectLevel = new ButtonMenu("SELECT LEVEL");
+	//ButtonMenu restart = new ButtonMenu("RESTART");
+	//ButtonMenu selectLevel = new ButtonMenu("SELECT LEVEL");
 	ButtonMenu tutorial = new ButtonMenu("TUTORIAL");
-	ButtonMenu nextLevel = new ButtonMenu("NEXT LEVEL");
-	ButtonMenu mainMenu = new ButtonMenu("MAIN MENU");
+	//ButtonMenu nextLevel = new ButtonMenu("NEXT LEVEL");
+	//ButtonMenu mainMenu = new ButtonMenu("MAIN MENU");
 	ButtonMenu exit = new ButtonMenu("EXIT");
 
 	/**
@@ -52,7 +52,7 @@ public class MenuPane extends Parent{
 		
 		VBox menu = new VBox();
 
-		ButtonMenu [] boutons = {play, restart, selectLevel, tutorial, nextLevel, mainMenu, exit};
+		ButtonMenu [] boutons = {play, /*restart, selectLevel,*/ tutorial, /*nextLevel, mainMenu,*/ exit};
 
 		play.setOnMouseClicked(event -> {
 			FadeTransition ft = new FadeTransition(Duration.seconds(1), this);
