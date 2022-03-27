@@ -173,6 +173,8 @@ public class Controller extends Application {
             win.setFont(font);
             win.setTextFill(Color.RED);
             showPopup(win, mainStage.getX()+(mainStage.getX()/2), mainStage.getY()+(mainStage.getY()/2));
+            this.setSelectionStage();
+            hidePopup();
         }
     }
 

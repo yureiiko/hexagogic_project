@@ -16,14 +16,12 @@ modele/StaticCell.java
  modele.StaticCell
 modele/Constants.java
  modele.Constants
-module-info.java
- module-info
+sample/LevelRead.java
+ sample.LevelRead
 modele/LogicalCircuit.java
  modele.LogicalCircuit
 sample/CreateLevel.java
  sample.CreateLevel
-sample/LevelRead.java
- sample.LevelRead
 view/TileOperationPane.java
  view.TileOperationPane
 view/TutoScene.java
@@ -42,6 +40,8 @@ view/MenuPane.java
  view.MenuPane
 view/TutoPane.java
  view.TutoPane
+module-info.java
+ module-info
 view/SelectionPane.java
  view.SelectionPane
 view/GameScene.java
