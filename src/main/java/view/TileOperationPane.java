@@ -7,6 +7,8 @@ import javafx.scene.layout.TilePane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import modele.Constants;
+import modele.LogicalCircuit;
+import modele.LogicalOperation;
 import modele.RadioOperationButton;
 import sample.*;
 
@@ -27,7 +29,8 @@ public class TileOperationPane extends TilePane {
         controller = parController;
         for (int i=0 ; i<listOpe.length ; i++) {
             RadioOperationButton opeButton = new RadioOperationButton(listOpe[i]);
-            opeButton.setTextFill(Constants.COLORS[i]);
+            LogicalOperation lo = new LogicalOperation(listOpe[i]);
+            opeButton.setTextFill(lo.getColor());
             if (i==0) {
                 opeButton.setSelected(true);
             }

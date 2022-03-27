@@ -10,12 +10,10 @@ modele/Position.java
  modele.Position
 modele/RadioOperationButton.java
  modele.RadioOperationButton
-module-info.java
- module-info
-modele/StaticCell.java
- modele.StaticCell
 modele/LogicalCell.java
  modele.LogicalCell
+modele/StaticCell.java
+ modele.StaticCell
 modele/Constants.java
  modele.Constants
 view/TutoScene.java
@@ -28,21 +26,23 @@ view/MenuPane.java
  view.MenuPane
 view/TutoPane.java
  view.TutoPane
+module-info.java
+ module-info
 view/SelectionPane.java
  view.SelectionPane
 view/TileOperationPane.java
  view.TileOperationPane
 modele/LogicalCircuit.java
  modele.LogicalCircuit
-sample/LevelRead.java
- sample.LevelRead
-sample/CreateLevel.java
- sample.CreateLevel
-view/MenuScene.java
- view.MenuScene
 sample/Controller.java
  sample.Controller
 view/GridGroup.java
  view.GridGroup
+view/MenuScene.java
+ view.MenuScene
+sample/CreateLevel.java
+ sample.CreateLevel
 view/GameScene.java
  view.GameScene
+sample/LevelRead.java
+ sample.LevelRead
