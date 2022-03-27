@@ -56,9 +56,9 @@ public class LogicalCell {
      * @param parVal Boolean
      * Change the expected value
      */
-    /*public void setExpectedVal(Boolean parVal) {
+    public void setExpectedVal(Boolean parVal) {
         expectedVal = parVal;
-    }*/
+    }
 
     /**
      * Method setnextCell1
