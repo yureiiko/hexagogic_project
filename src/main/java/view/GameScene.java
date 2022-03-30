@@ -38,7 +38,7 @@ public class GameScene extends Scene {
         gridPane.getChildren().add(gridGroup);
         gamePane.setCenter(gridPane);
 
-        String [] opeList = {"AND", "OR"} ;
+        String [] opeList = {"AND", "NAND", "OR", "NOR", "XOR", "NXOR"} ;
         TileOperationPane tileOpe = new TileOperationPane(opeList, controller);
         gamePane.setRight(tileOpe);
     }

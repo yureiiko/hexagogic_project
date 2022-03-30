@@ -27,7 +27,11 @@ public class LogicalOperation {
     public boolean execute(Boolean v1, Boolean v2) {
         switch (name) {
             case "AND" : return v1 && v2;
+            case "NAND" : return !(v1 && v2);
             case "OR" : return v1 || v2;
+            case "NOR" : return !(v1 || v2);
+            case "XOR" : return v1 ^ v2;
+            case "NXOR" : return !(v1 ^ v2);
             default: return v1;
         }
     }
@@ -39,8 +43,12 @@ public class LogicalOperation {
      */
     public Color getColor() {
         switch (name) {
-            case "AND" : return Color.BLUE;
+            case "AND" : return Color.GREEN;
+            case "NAND" : return Color.LIGHTGREEN;
             case "OR" : return Color.RED;
+            case "NOR" : return Color.INDIANRED;
+            case "XOR" : return Color.SKYBLUE;
+            case "NXOR" : return Color.CYAN;
             default: return Color.WHITE;
         }
     }

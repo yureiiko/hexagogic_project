@@ -168,7 +168,7 @@ public class Controller extends Application {
         }
         System.out.println(gameScene.getGridGroup().closeCircuit());
         if (gameScene.getGridGroup().closeCircuit()) {
-            Font font = new Font(20.0);
+            Font font = new Font(25.0);
             Label win = new Label("YOU WIN");
             win.setFont(font);
             win.setTextFill(Color.RED);

@@ -28,10 +28,12 @@ public class TileOperationPane extends TilePane {
     public TileOperationPane(String [] listOpe, Controller parController) {
         super();
         controller = parController;
+        Font font = new Font(18);
         for (int i=0 ; i<listOpe.length ; i++) {
             RadioOperationButton opeButton = new RadioOperationButton(listOpe[i]);
             LogicalOperation lo = new LogicalOperation(listOpe[i]);
             opeButton.setTextFill(lo.getColor());
+            opeButton.setFont(font);
             if (i==0) {
                 opeButton.setSelected(true);
             }
@@ -40,6 +42,7 @@ public class TileOperationPane extends TilePane {
         }
         RadioButton radioButton = new RadioButton("ERASE");
         radioButton.setTextFill(Color.WHITE);
+        radioButton.setFont(font);
         radioButton.setToggleGroup(radioGroup);
         this.getChildren().add(radioButton);
     }

@@ -1,27 +1,29 @@
-tmp/HelloWorld.java
- tmp.HelloWorld
+sample/CreateLevel.java
+ sample.CreateLevel
 view/ButtonMenu.java
  view.ButtonMenu
 sample/ReadWrite.java
  sample.ReadWrite
-modele/LogicalOperation.java
- modele.LogicalOperation
-modele/Position.java
- modele.Position
-modele/RadioOperationButton.java
- modele.RadioOperationButton
-modele/LogicalCell.java
- modele.LogicalCell
-modele/StaticCell.java
- modele.StaticCell
 modele/Constants.java
  modele.Constants
+modele/Position.java
+ modele.Position
 sample/LevelRead.java
  sample.LevelRead
+modele/LogicalOperation.java
+ modele.LogicalOperation
 modele/LogicalCircuit.java
  modele.LogicalCircuit
-sample/CreateLevel.java
- sample.CreateLevel
+modele/LogicalCell.java
+ modele.LogicalCell
+tmp/HelloWorld.java
+ tmp.HelloWorld
+modele/StaticCell.java
+ modele.StaticCell
+modele/RadioOperationButton.java
+ modele.RadioOperationButton
+module-info.java
+ module-info
 view/TileOperationPane.java
  view.TileOperationPane
 view/TutoScene.java
@@ -40,8 +42,6 @@ view/MenuPane.java
  view.MenuPane
 view/TutoPane.java
  view.TutoPane
-module-info.java
- module-info
 view/SelectionPane.java
  view.SelectionPane
 view/GameScene.java

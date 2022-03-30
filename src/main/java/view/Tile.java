@@ -3,6 +3,7 @@ package view;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Polygon;
+import javafx.scene.text.Font;
 import modele.LogicalCell;
 import modele.Position;
 import sample.Controller;
@@ -34,10 +35,14 @@ public class Tile extends Polygon {
         this.setOnMouseEntered( event -> {
             if (this.getLogicalCell()!=null) {
                 if (this.getLogicalCell().getOperation()!=null) {
-                    controller.showPopup(new Label(this.getLogicalCell().getOperation().toString()), event.getScreenX(), event.getSceneY());
+                    Label ope = new Label(this.getLogicalCell().getOperation().toString());
+                    ope.setFont(new Font(16));
+                    controller.showPopup(ope, event.getScreenX(), event.getSceneY());
                 }
                 else {
-                    controller.showPopup(new Label(this.logicalCell.getOut().toString()), event.getScreenX(), event.getScreenY());
+                    Label val = new Label(this.logicalCell.getOut().toString());
+                    val.setFont(new Font(16));
+                    controller.showPopup(val, event.getScreenX(), event.getScreenY());
                 }
             }
         });
