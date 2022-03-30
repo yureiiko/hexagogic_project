@@ -18,8 +18,7 @@ public final class Constants {
             "image/tuto/page4.jpg",
             "image/tuto/page5.jpg",
             "image/tuto/page6.jpg",
-            "image/tuto/page7.jpg",
-            "image/tuto/page8.jpg"} ;
+            "image/tuto/page7.jpg"} ;
 
     public static Color [] COLORS = {
             Color.BLUE,
