@@ -19,9 +19,10 @@ public class CreateLevel {
 
     static public void main(String [] args) {
         LevelRead levelRead = new LevelRead();
+        System.out.println(levelRead.size());
 
         /***Begin Cells tab***/
-        Boolean [] beginVal = {false, true};
+        Boolean [] beginVal = {true, true};
         /******/
         ArrayList<StaticCell> beginCells = new ArrayList<StaticCell>();
         for (int i=0 ; i<beginVal.length ; i++) {
@@ -45,10 +46,13 @@ public class CreateLevel {
         String dir = "Use only two first operation tile";
         /******/
 
+        System.out.println("Attributs created");
         LogicalCircuit logicalCircuit = new LogicalCircuit(beginCells, beginPos, endCell, endPos);
         logicalCircuit.setExplications(dir);
 
-        //levelRead.addLevel(logicalCircuit);
+        System.out.println("Level Created");
+        levelRead.addLevel(logicalCircuit);
+        System.out.println(levelRead.size()+"\n end");
     }
 
 }

@@ -1,10 +1,12 @@
 package modele;
 
+import java.io.Serializable;
+
 /**
  * Class StaticCell extends LogicalCell
  * @author FLEURY CALAIS Pierre
  */
-public class StaticCell extends LogicalCell {
+public class StaticCell extends LogicalCell implements Serializable {
     private final Boolean staticVal;
     private Boolean givenVal;
 

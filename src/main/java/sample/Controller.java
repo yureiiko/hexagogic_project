@@ -74,6 +74,7 @@ public class Controller extends Application {
      * Display a panel to select the level
      */
     public void setSelectionStage() {
+        System.out.println(allLevel.size());
         SelectionPane selectionPane = new SelectionPane(this, allLevel.size());
         Scene selectionScene = new Scene(selectionPane, Constants.high, Constants.with);
 
@@ -117,7 +118,8 @@ public class Controller extends Application {
         Boolean allowed = true;
         Iterator iter = forbidden.iterator();
         while (iter.hasNext()) {
-            if (iter.next().equals(parTile.getPosition())) {
+            Position pos = (Position) iter.next();
+            if (pos.equals(parTile.getPosition())) {
                 allowed = false;
             }
         }

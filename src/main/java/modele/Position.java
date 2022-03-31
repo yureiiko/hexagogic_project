@@ -2,11 +2,13 @@ package modele;
 
 import javafx.geometry.Pos;
 
+import java.io.Serializable;
+
 /**
  * @author FLEURY CALAIS Pierre
  * Class Position
  */
-public class Position {
+public class Position implements Serializable {
     private int row;
     private int col;
 

@@ -35,9 +35,9 @@ public class Tile extends Polygon {
         this.setOnMouseEntered( event -> {
             if (this.getLogicalCell()!=null) {
                 if (this.getLogicalCell().getOperation()!=null) {
-                    Label ope = new Label(this.getLogicalCell().getOperation().toString());
+                    /*Label ope = new Label(this.getLogicalCell().getOperation().toString());
                     ope.setFont(new Font(16));
-                    controller.showPopup(ope, event.getScreenX(), event.getSceneY());
+                    controller.showPopup(ope, event.getScreenX(), event.getSceneY());*/
                 }
                 else {
                     Label val = new Label(this.logicalCell.getOut().toString());

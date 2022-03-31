@@ -46,7 +46,7 @@ public class GridGroup extends Group {
                 allTiles.add(tile);
                 tile.setOnMouseClicked( event -> {
                     System.out.println(tile.getPosition());
-                    controller.setNewTile(tile, forbidden);
+                    controller.setNewTile(tile, this.getForbiddenPos());
                 });
                 this.getChildren().add(tile);
             }

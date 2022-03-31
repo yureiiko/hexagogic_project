@@ -1,12 +1,13 @@
 package modele;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * @author FLEURY CALAIS Pierre
  * Class LogicalCircuit
  */
-public class LogicalCircuit {
+public class LogicalCircuit implements Serializable {
 
     private ArrayList<StaticCell> beginCells = new ArrayList<StaticCell>();
     private ArrayList<Position> beginPosition = new ArrayList<Position>();
@@ -82,7 +83,7 @@ public class LogicalCircuit {
      * Return an ArrayList with Position occupied by begin and en cells
      */
     public ArrayList<Position> getStaticPosition() {
-        ArrayList<Position> out = new ArrayList<Position>(beginPosition);
+        ArrayList<Position> out = beginPosition;
         out.add(endPosition);
         return out;
     }

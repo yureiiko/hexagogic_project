@@ -22,6 +22,7 @@ public class LevelRead {
      * Constructor LevelRead
      */
     public LevelRead(){
+        //file = new File("file_level.ser");
         this.createFile();
     }
 
@@ -38,10 +39,13 @@ public class LevelRead {
      * Method addLevel
      * @param level LogicalCircuit
      */
-    public void addLevel(LogicalCircuit  level) {
+    public void addLevel(LogicalCircuit level) {
         ArrayList <LogicalCircuit> listLevel2 = (ArrayList<LogicalCircuit>) writeRead.reading(file);
+        System.out.println("LR : "+listLevel2.size());
         listLevel2.add(level);
+        System.out.println("LR : "+listLevel2.size());
         listLevel = listLevel2;
+        System.out.println("LR : "+listLevel.size());
         this.createFile();
     }
 
@@ -62,7 +66,7 @@ public class LevelRead {
      *  Method createFile
      */
     public void createFile() {
-        file.delete();
+        //file.delete();
         if (file.length()==0){
             try {
                 file.createNewFile();
